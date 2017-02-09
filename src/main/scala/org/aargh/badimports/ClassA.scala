@@ -7,8 +7,6 @@ case class ClassA(
   field2: String
 )
 
-class ClassAModel extends DefaultJsonProtocol {
+object ClassAModel extends DefaultJsonProtocol {
   implicit val ClassAFormat = jsonFormat2(ClassA)
 }
-
-object ClassAModel extends ClassAModel
