@@ -15,9 +15,7 @@ class ImportSpec extends FreeSpec with Assertions {
       val b = ClassB(2, "b")
 
       a.toJson
-      b.toJson
-
-      //[info] All tests passed.
+      Seq(b).toJson //Cannot find JsonWriter or JsonFormat type class for Seq[org.aargh.badimports.ClassB]
     }
   }
 }
