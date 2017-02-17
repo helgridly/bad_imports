@@ -2,7 +2,7 @@ package org.aargh.badimports
 
 import org.scalatest.{Assertions, FreeSpec}
 
-import ClassAModel._
+import ClassAModel.ClassAFormat
 import ClassBModel._
 
 import spray.json._
@@ -13,8 +13,6 @@ class ImportSpec extends FreeSpec with Assertions {
     "should work" in {
       val a = ClassA(1, "a")
       val b = ClassB(2, "b")
-
-      //import spray.json.DefaultJsonProtocol._ required here. Why?
 
       Seq(a).toJson
       Seq(b).toJson
