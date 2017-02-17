@@ -2,7 +2,7 @@ package org.aargh.badimports
 
 import org.scalatest.{Assertions, FreeSpec}
 
-import ClassAModel.ClassAFormat
+import ClassAModel._
 import ClassBModel._
 
 import spray.json._
@@ -14,8 +14,10 @@ class ImportSpec extends FreeSpec with Assertions {
       val a = ClassA(1, "a")
       val b = ClassB(2, "b")
 
-      Seq(a).toJson
-      Seq(b).toJson
+      a.toJson
+      b.toJson
+
+      //[info] All tests passed.
     }
   }
 }
